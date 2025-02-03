@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: "Montserrat", serif;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+.contenedor-header div img{
+    width: 70px;
+}
+
+
+.navbar{
+
+    background-color: #07355D;
+    
+}
+
+.navBar li{
+    
+}
+
+.navBar a:hover {
+    color: lightgray; 
+}
+
+.navbar-nav a{
+    color: #FFFFFF;
+    margin: 0 50px;
+    font-size: 3vh; 
+}
+
+.sectionServicios{
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.contenedor-header{
+    background-color: #07355D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.sectionServicios article{
+
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+
+}
+
+footer{
+    background-color: #07355D;
+    
+}
+
+footer p, a{
+    color: #ffffff;
+}
+
+.logo{
+    padding: 15px;
+    
+}
+
+
+
+
+.centrado-h1{
+    text-align: center;
+    padding: 30px;
+}
+
+.imagen-principal img{
+    width: 1300px;
+}
+
+.principal{ 
+    height: 100vh; 
+    width: 100%;
+    background-image: url('../assets/imagen-principal.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.parrafoNosotros{
+    padding-bottom: 15px;
+    padding-left: 5px;
+    
+}
+
+.centradoNosotros{
+    display: flex;
+    justify-content: center;
+}
+
+.video{
+    padding-left: 5px;
+}
+
+.secciones{
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+
+.parrafoServicios{
+    padding-bottom: 15px;
+    
+}
+
+
+h1{
+    font-size: 60px;
+}
+
+.articuloServicios{
+    margin: 5px;
+
+}
+
+.contenedor-header{
+    display: flex;
+    align-items: center; 
+}
+
+
+
+.contenedor-contacto{
+    
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* El primer elemento ocupa más espacio */
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    max-width: 80%;
+    margin: auto;
+}
+
+.textoPrincipal{
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Dos columnas: izquierda más pequeña, derecha más grande */
+    gap: 40px;
+    align-items: center; /* Centra verticalmente */
+    max-width: 80%;
+    margin: auto;
+}
+
+/* CONTENEDOR DEL TÍTULO Y TEXTO */
+.titulo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Alinea a la izquierda */
+    text-align: left;
+}
+
+.articuloServicios p {
+    padding: 20px;
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    
+    
+}
+
+.cajas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 20px;
+}
+
+.titulo {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* TEXTO PRINCIPAL */
+.textoPrincipal {
+    width: 100%;
+}
+
+.titulo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.articuloServicios h2{
+    text-align: center;
+}
+
+
+/* Para tablets (menos de 768px) */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        text-align: center; /* Centra el contenido */
+    }
+
+    .titulo-container {
+        align-items: center; /* Centra el título y texto */
+        text-align: center;
+    }
+
+    .cajas {
+        grid-template-columns: 1fr; /* Las cajas se apilan en una columna */
+    }
+}
+
+/* Para mobile (menos de 480px) */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Todo en una sola columna */
+        text-align: center;
+    }
+
+    .titulo-container {
+        align-items: center; /* Centra el título */
+        text-align: center;
+    }
+
+    .cajas {
+        grid-template-columns: 1fr; /* Cajas en una columna */
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+.accordion-button:focus {
+    background-color: #07355D; 
+    color: white; 
+}
+
+
+.accordion-button.collapsed {
+    background-color: #07355D;
+    color: white;
+}
+
+
+
+
+
+.contenedor-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: start;
+}
+
+/* Contenedor del formulario */
+.formulario-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.formulario-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+/* Contenedor del mapa */
+.mapa-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+/* Datos de contacto alineados debajo del mapa */
+.datos-contacto {
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mapa-container h2{
+    text-align: center;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .contenedor-contacto {
+        grid-template-columns: 1fr; 
+    }
+
+    .formulario-container,
+    .mapa-container {
+        max-width: 100%; 
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .contenedor-contacto {
+        grid-template-columns: 1fr; 
+    }
+}
