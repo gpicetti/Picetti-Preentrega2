@@ -1,4 +1,13 @@
 /* Variables */
+$color-principal: #07355D;
+$color-secundario: #ffffff;
+$color-fondo: whitesmoke;
+$color-hover: lightgray;
+$color-sombra: black;
+$font-familia: "Montserrat", serif;
+$padding-general: 20px;
+$border-radius: 5px;
+
 /* Reset global */
 * {
   margin: 0;
@@ -8,88 +17,90 @@
 
 /* Body */
 body {
-  font-family: "Montserrat", serif;
+  font-family: $font-familia;
   margin: 0;
-  background-color: whitesmoke;
+  background-color: $color-fondo;
 }
 
 /* Header */
 .contenedor-header {
-  background-color: #07355D;
+  background-color: $color-principal;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-}
-.contenedor-header div img {
-  width: 70px;
+  padding: $padding-general;
+  div {
+    img {
+      width: 70px;
+    }
+  }
 }
 
 /* Navbar */
 .navbar {
-  background-color: #07355D;
-}
-.navbar .navBar a:hover {
-  color: lightgray;
-}
-.navbar .navbar-nav a {
-  color: #ffffff;
-  margin: 0 50px;
-  font-size: 3vh;
+  background-color: $color-principal;
+  .navBar a:hover {
+    color: $color-hover;
+  }
+  .navbar-nav a {
+    color: $color-secundario;
+    margin: 0 50px;
+    font-size: 3vh;
+  }
 }
 
 /* Servicios */
 .sectionServicios {
   padding-left: 5px;
   padding-top: 5px;
-}
-.sectionServicios article {
-  width: 250px;
-  height: 250px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px black;
-}
-.sectionServicios .grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: center;
-  padding: 20px;
+  article {
+    width: 250px;
+    height: 250px;
+    background-color: $color-secundario;
+    border-radius: $border-radius;
+    box-shadow: 2px 2px 5px $color-sombra;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: $padding-general;
+  }
 }
 
 .left-section {
-  padding: 20px;
-}
-.left-section h2 {
-  text-align: center;
-}
-.left-section p {
-  text-align: justify;
+  padding: $padding-general;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: justify;
+  }
 }
 
 .right-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-}
-.right-section .card {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-.right-section .card p {
-  text-align: center;
+  .card {
+    background-color: #f4f4f4;
+    padding: $padding-general;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    p {
+      text-align: center;
+    }
+  }
 }
 
 /* Footer */
 footer {
-  background-color: #07355D;
-}
-footer p, footer a {
-  color: #ffffff;
+  background-color: $color-principal;
+  p, a {
+    color: $color-secundario;
+  }
 }
 
 .logo {
@@ -142,10 +153,10 @@ footer p, footer a {
   align-items: start;
   max-width: 80%;
   margin: auto;
-}
-.grid-container .textoPrincipal {
-  margin: 0;
-  padding: 0;
+  .textoPrincipal {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .grid-container.two-columns {
@@ -162,12 +173,12 @@ footer p, footer a {
   justify-content: center;
   align-items: flex-start;
   text-align: left;
-}
-.titulo-container .articuloServicios p {
-  padding: 20px;
-  display: flex;
-  text-align: justify;
-  justify-content: center;
+  .articuloServicios p {
+    padding: 20px;
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+  }
 }
 
 /* Responsive */
@@ -192,6 +203,7 @@ footer p, footer a {
     grid-template-columns: 1fr;
   }
 }
+
 @media (max-width: 480px) {
   .header {
     flex-direction: column;
@@ -217,15 +229,16 @@ footer p, footer a {
     text-align: center;
   }
 }
+
 /* Accordion Button */
 .accordion-button:focus {
-  background-color: #07355D;
-  color: #ffffff;
+  background-color: $color-principal;
+  color: $color-secundario;
 }
 
 .accordion-button.collapsed {
-  background-color: #07355D;
-  color: #ffffff;
+  background-color: $color-principal;
+  color: $color-secundario;
 }
 
 /* Contacto */
@@ -235,42 +248,42 @@ footer p, footer a {
   gap: 20px;
   margin-top: 20px;
   align-items: start;
-}
-.contenedor-contacto .formulario-container {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  width: 100%;
-  max-width: 500px;
-}
-.contenedor-contacto .formulario-container h2 {
-  text-align: center;
-  margin-bottom: 15px;
-}
-.contenedor-contacto .formulario-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-.contenedor-contacto .mapa-container {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  width: 100%;
-  max-width: 500px;
-}
-.contenedor-contacto .mapa-container iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-}
-.contenedor-contacto .mapa-container h2 {
-  text-align: center;
-}
-.contenedor-contacto .datos-contacto {
-  padding: 10px;
-  text-align: center;
-  margin-top: 20px;
+  .formulario-container {
+    display: flex;
+    flex-direction: column;
+    padding: $padding-general;
+    width: 100%;
+    max-width: 500px;
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+  }
+  .mapa-container {
+    display: flex;
+    flex-direction: column;
+    padding: $padding-general;
+    width: 100%;
+    max-width: 500px;
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+    h2 {
+      text-align: center;
+    }
+  }
+  .datos-contacto {
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -281,6 +294,7 @@ footer p, footer a {
     max-width: 100%;
   }
 }
+
 @media (max-width: 1024px) {
   .contenedor-contacto {
     grid-template-columns: 1fr;
@@ -299,6 +313,7 @@ footer p, footer a {
     width: 45%;
   }
 }
+
 /* Animaciones */
 .mapa-container iframe:hover {
   transform: scale(1.5);
@@ -307,5 +322,3 @@ footer p, footer a {
 .card:hover {
   transform: rotate(5deg);
 }
-
-/*# sourceMappingURL=style.css.map */
