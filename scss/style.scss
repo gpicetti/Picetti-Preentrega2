@@ -97,11 +97,31 @@ body {
 
 /* Footer */
 footer {
-  background-color: $color-principal;
-  p, a {
-    color: $color-secundario;
+  background-color: $color-principal; // Usa el color principal definido
+  color: $color-secundario; // Usa el color secundario (blanco)
+  text-align: center;
+  padding: $padding-general; // Usa el padding general
+  font-family: $font-familia; // Usa la fuente definida
+
+  a {
+      color: $color-secundario;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+
+      &:hover {
+          color: $color-hover; // Usa el color de hover definido
+          text-decoration: underline;
+      }
+  }
+
+  p {
+      margin: 5px 0;
+      font-size: 14px;
   }
 }
+
+
 
 .logo {
   padding: 15px;
