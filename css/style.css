@@ -1,4 +1,18 @@
-/* Variables */
+@charset "UTF-8";
+/* UTILITIES */
+/* Colores */
+/* Tipografía */
+/* Espaciado */
+/* Radio de Bordes */
+/* Mixin para Border Radius */
+/* Mixin para Box Shadow */
+/* Mixin para Flexbox */
+/* Mixin para Grid */
+/* Mixin para Text Align */
+/* Mixin para Media Queries */
+/* Mixin para Background Image */
+/* Mixin para Hover Effects */
+/* BASE */
 /* Reset global */
 * {
   margin: 0;
@@ -6,23 +20,89 @@
   box-sizing: border-box;
 }
 
+/* LAYOUT */
+/* UTILITIES */
+/* _footer.scss */
+footer {
+  background-color: #07355D;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-family: "Montserrat", serif;
+}
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+footer a:hover {
+  color: lightgray;
+  text-decoration: underline;
+}
+footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* UTILITIES */
+/* Header */
+.contenedor-header {
+  background-color: #07355D;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.contenedor-header div img {
+  width: 70px;
+}
+
+/* COMPONENTS */
+/* UTILITIES */
+/* Cards */
+.right-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.right-section .card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.right-section .card p {
+  text-align: center;
+}
+
+.card:hover {
+  transform: rotate(5deg);
+}
+
+/* UTILITIES */
+/* Accordion Button */
+.accordion-button:focus {
+  background-color: #07355D;
+  color: #ffffff;
+}
+
+.accordion-button.collapsed {
+  background-color: #07355D;
+  color: #ffffff;
+}
+
 /* Body */
 body {
   font-family: "Montserrat", serif;
   margin: 0;
   background-color: whitesmoke;
-}
-
-/* Header */
-.contenedor-header {
-  background-color: #07355D;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-}
-.contenedor-header div img {
-  width: 70px;
 }
 
 /* Navbar */
@@ -47,7 +127,11 @@ body {
   width: 250px;
   height: 250px;
   background-color: #ffffff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 5px black;
+  -moz-box-shadow: 2px 2px 5px black;
   box-shadow: 2px 2px 5px black;
 }
 .sectionServicios .grid-container {
@@ -66,45 +150,6 @@ body {
 }
 .left-section p {
   text-align: justify;
-}
-
-.right-section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-.right-section .card {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-.right-section .card p {
-  text-align: center;
-}
-
-/* Footer */
-footer {
-  background-color: #07355D;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px;
-  font-family: "Montserrat", serif;
-}
-footer a {
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-}
-footer a:hover {
-  color: lightgray;
-  text-decoration: underline;
-}
-footer p {
-  margin: 5px 0;
-  font-size: 14px;
 }
 
 .logo {
@@ -164,6 +209,7 @@ footer p {
 }
 
 .grid-container.two-columns {
+  display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 40px;
   align-items: center;
@@ -232,17 +278,6 @@ footer p {
     text-align: center;
   }
 }
-/* Accordion Button */
-.accordion-button:focus {
-  background-color: #07355D;
-  color: #ffffff;
-}
-
-.accordion-button.collapsed {
-  background-color: #07355D;
-  color: #ffffff;
-}
-
 /* Contacto */
 .contenedor-contacto {
   display: grid;
@@ -317,10 +352,6 @@ footer p {
 /* Animaciones */
 .mapa-container iframe:hover {
   transform: scale(1.5);
-}
-
-.card:hover {
-  transform: rotate(5deg);
 }
 
 /*# sourceMappingURL=style.css.map */

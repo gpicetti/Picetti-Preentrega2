@@ -1,0 +1,65 @@
+// _mixins.scss
+
+/* Mixin para Border Radius */
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+  }
+  
+  /* Mixin para Box Shadow */
+  @mixin box-shadow($x, $y, $blur, $color) {
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
+  }
+  
+  /* Mixin para Flexbox */
+  @mixin flex-container($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }
+  
+  /* Mixin para Grid */
+  @mixin grid-container($columns: 1fr, $gap: 20px) {
+    display: grid;
+    grid-template-columns: $columns;
+    gap: $gap;
+  }
+  
+  /* Mixin para Text Align */
+  @mixin text-align($alignment) {
+    text-align: $alignment;
+  }
+  
+  /* Mixin para Media Queries */
+  @mixin respond-to($size) {
+    @if $size == small {
+      @media (max-width: 480px) { @content; }
+    }
+    @else if $size == medium {
+      @media (max-width: 768px) { @content; }
+    }
+    @else if $size == large {
+      @media (max-width: 1024px) { @content; }
+    }
+  }
+  
+  /* Mixin para Background Image */
+  @mixin background-image($image) {
+    background-image: url($image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Mixin para Hover Effects */
+  @mixin hover-effect($bg-color, $color) {
+    &:hover {
+      background-color: $bg-color;
+      color: $color;
+    }
+  }
+  

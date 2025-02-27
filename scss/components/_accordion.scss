@@ -1,0 +1,15 @@
+/* Accordion Button */
+
+@use '../utilities/variables' as *;
+
+
+.accordion-button:focus {
+    background-color: $color-principal;
+    color: $color-secundario;
+  }
+  
+  .accordion-button.collapsed {
+    background-color: $color-principal;
+    color: $color-secundario;
+  }
+  

@@ -1,0 +1,25 @@
+/* Cards */
+
+@use '../utilities/variables' as *;
+
+@use '../utilities/mixins' as *;
+
+
+.right-section {
+    @include grid-container(1fr 1fr, 20px); // mixin grid-container
+    .card {
+      background-color: #f4f4f4;
+      padding: $padding-general;
+      @include border-radius(8px); // mixin border-radius
+      @include box-shadow(0, 4px, 6px, rgba(0, 0, 0, 0.1)); // mixin box-shadow // mixin box-shadow
+      text-align: center;
+      p {
+        text-align: center;
+      }
+    }
+  }
+  
+  .card:hover {
+    transform: rotate(5deg);
+  }
+  

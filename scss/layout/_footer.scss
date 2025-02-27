@@ -1,0 +1,29 @@
+/* _footer.scss */
+
+@use '../utilities/variables' as *; 
+
+footer {
+    background-color: $color-principal;
+    color: $color-secundario;
+    text-align: center;
+    padding: $padding-general;
+    font-family: $font-familia;
+
+    a {
+      color: $color-secundario;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+  
+      &:hover {
+        color: $color-hover;
+        text-decoration: underline;
+      }
+    }
+  
+    p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+  }
+  
